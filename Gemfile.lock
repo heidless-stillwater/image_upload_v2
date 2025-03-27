@@ -122,6 +122,11 @@ GEM
       factory_bot (~> 6.5)
       railties (>= 5.0.0)
     ffi (1.17.1)
+    ffi (1.17.1-aarch64-linux-gnu)
+    ffi (1.17.1-arm-linux-gnu)
+    ffi (1.17.1-arm64-darwin)
+    ffi (1.17.1-x86-linux-gnu)
+    ffi (1.17.1-x86_64-darwin)
     ffi (1.17.1-x86_64-linux-gnu)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -355,15 +360,18 @@ DEPENDENCIES
   dotenv-rails (~> 2.8)
   factory_bot_rails
   faker!
+  ffi (~> 1.17)
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
+  mini_magick (~> 5.2)
   nokogiri (= 1.16.6)
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.2.2, >= 7.2.2.1)
   rspec-rails (~> 7.1, >= 7.1.1)
   rubocop-rails-omakase
+  ruby-vips (~> 2.2)
   selenium-webdriver
   shoulda-matchers (~> 6.0)
   sprockets-rails

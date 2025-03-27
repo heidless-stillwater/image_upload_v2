@@ -65,3 +65,11 @@ end
 gem "dotenv-rails", "~> 2.8"
 gem "will_paginate", "~> 4.0"
 gem "nokogiri", "= 1.16.6"
+
+# gem "ruby-vips", "~> 2.2"
+
+gem "ruby-vips", "~> 2.2"
+
+gem "mini_magick", "~> 5.2"
+
+gem "ffi", "~> 1.17"

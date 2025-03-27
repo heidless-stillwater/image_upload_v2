@@ -36,6 +36,11 @@
         <%= f.file_field :avatar, class:"form-control mb-3 shadow rounded" %> <%# This is the avatar. i.e. single image uplaod %>
       </div>
 
+      <div>
+        <%= f.label :content, class: "col-2 mb-3 col-form-label text-light" %>
+        <%= f.rich_text_area :content %> 
+      </div>
+
       <div class="form-group row">
         <%= f.submit(@user.new_record? ? "signup" : "update account", class: "btn btn-primary btn-outline-light btn-lg d-grid gap-2 col-5 mx-auto mt-4") %>
       </div>
