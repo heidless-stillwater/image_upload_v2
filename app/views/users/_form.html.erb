@@ -37,6 +37,19 @@
       </div>
 
       <div>
+        <%= f.label :images, "Upload Images" %> <br />
+        <% if @user.images.attached? %>
+          <% @user.images.each do |image| %>
+            <%= f.hidden_field :images, multiple: true, value: image.signed_id %>
+            <%= image_tag(image, height: 100) %>
+            <%= link_to "Remove", remove_image_user_path(image), data: { confirm: "sure?", turbo_method: :delete }, class: "btn btn-xs btn-warning" %>
+            <br />
+          <% end %>
+        <% end %>
+        <%= f.file_field :images, multiple: true %>
+      </div>
+      
+      <div>
         <%= f.label :content, class: "col-2 mb-3 col-form-label text-light" %>
         <%= f.rich_text_area :content %> 
       </div>

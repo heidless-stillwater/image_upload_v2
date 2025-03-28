@@ -62,7 +62,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :admin, :bio, :avatar, :content)
+    params.require(:user).permit(:username, :email, :password, :admin, :bio, :avatar, :content, images: [])
   end
 
   def require_same_user

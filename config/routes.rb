@@ -30,7 +30,12 @@ Rails.application.routes.draw do
   post "login", controller: "sessions", action: :create
   delete "logout", controller: "sessions", action: :destroy
 
-  resources :users, except: [:new]
+  resources :users, except: [:new] do
+    member do
+      # remove_image_post_path(image)
+      delete :remove_image
+    end
+  end
 
   resources :categories, except: [:destroy]
 end

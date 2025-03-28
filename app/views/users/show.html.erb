@@ -12,6 +12,14 @@
   <%= image_tag @user.avatar, class: "mx-auto d-block" %> <br /> <%# this is for viewing the avatar attachment we add i.e  single image%>
 
   <div class="my-5">
+    <% if @user.images.attached? %>
+      <% @user.images.each do |image| %>
+        <%= image_tag(image, height: 200) %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="my-5">
     <h4 class="text-center text-white"><%= @user.content %></h4>
   </div>
 
